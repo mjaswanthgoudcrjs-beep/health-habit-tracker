@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Habit Tracker</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        <i class="fa-solid fa-heart-pulse"></i>
+        HealthTrack
+    </div>
+
+    <nav>
+
+        <a href="#home">Home</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#water">Water</a>
+        <a href="#sleep">Sleep</a>
+        <a href="#exercise">Exercise</a>
+        <a href="#progress">Progress</a>
+        <a href="#reminders">Reminders</a>
+        <a href="#blood pressure">bloodPressure</a>
+        <a href="heartpulse">heartpulse</a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <h1>Smart Health Monitoring System</h1>
+
+        <p>
+            Track your water intake, sleep, exercise and monitor your
+            daily health with beautiful dashboards.
+        </p>
+
+        <button id="getStarted">Get Started</button>
+    </div>
+
+</section>
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<section id="dashboard">
+
+    <h2>Dashboard</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <i class="fa-solid fa-heart-circle-check"></i>
+
+            <h3>Health Score</h3>
+
+            <h1>85%</h1>
+
+            <p>Excellent Progress</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <i class="fa-solid fa-glass-water"></i>
+
+            <h3>Water Intake</h3>
+
+            <h1>6 / 8</h1>
+
+            <p>Glasses</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <i class="fa-solid fa-bed"></i>
+
+            <h3>Sleep</h3>
+
+            <h1>7.5 hrs</h1>
+
+            <p>Good Sleep</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <i class="fa-solid fa-person-running"></i>
+
+            <h3>Exercise</h3>
+
+            <h1>45 min</h1>
+
+            <p>Today's Workout</p>
+
+        </div>
+
+
+        <div class="card"> 
+            <i class="fa-solid fa-heart-pulse"></i>
+
+            <h3>Heart Rate</h3>
+
+            <h1 id="heartRateValue">72 BPM</h1>
+
+            <p>Normal</p>
+
+        </div>
+
+<div class="card">
+    <i class="fa-solid fa-droplet"></i>
+    <h3>Blood Pressure</h3>
+    <h1 id="bpValue">120/80</h1>
+    <p>Normal</p>
+</div>
+
+<div class="card">
+    <i class="fa-solid fa-vial-circle-check"></i>
+    <h3>Blood Sugar</h3>
+    <h1 id="sugarValue">95 mg/dL</h1>
+    <p>Normal</p>
+</div>
+    </div>
+
+</section>
+
+
+
+<!-- ================= WATER ================= -->
+
+<section id="water">
+
+    <h2>Water Intake Tracker</h2>
+
+    <div class="tracker">
+
+        <h3>Today's Goal</h3>
+
+        <h1>8 Glasses</h1>
+
+        <div class="progress">
+
+            <div class="progress-fill"></div>
+
+        </div>
+
+        <button>+ Add Glass</button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SLEEP ================= -->
+
+<section id="sleep">
+
+    <h2>Sleep Tracker</h2>
+
+    <div class="tracker">
+
+        <label>Bed Time</label>
+
+        <input type="time">
+
+        <label>Wake Up Time</label>
+
+        <input type="time">
+
+        <button>Save Sleep</button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EXERCISE ================= -->
+
+<section id="exercise">
+
+    <h2>Exercise Tracker</h2>
+
+    <div class="tracker">
+
+        <label>Exercise Type</label>
+
+        <select>
+
+            <option>Walking</option>
+
+            <option>Running</option>
+
+            <option>Cycling</option>
+
+            <option>Yoga</option>
+
+            <option>Gym</option>
+
+        </select>
+
+        <label>Duration</label>
+
+        <input type="number" placeholder="Minutes">
+
+        <button>Add Exercise</button>
+
+    </div>
+
+</section>
+<section id="health">
+
+    <h2>Health Monitoring</h2>
+
+    <div class="tracker">
+
+        <label>Heart Rate (BPM)</label>
+        <input type="number" id="heartRate" placeholder="72">
+
+        <label>Blood Pressure (SYS/DIA)</label>
+        <input type="text" id="bloodPressure" placeholder="120/80">
+
+        <label>Blood Sugar (mg/dL)</label>
+        <input type="number" id="bloodSugar" placeholder="95">
+
+        <button id="saveHealth">Save Health Data</button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HEALTH SCORE ================= -->
+
+<section>
+
+    <h2>Daily Health Score</h2>
+
+    <div class="score-box">
+
+        <div class="circle">
+
+            <h1>85%</h1>
+
+        </div>
+
+        <p>
+            Great Job!
+            Keep maintaining your healthy habits.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROGRESS ================= -->
+
+<section id="progress">
+
+    <h2>Weekly Progress</h2>
+
+    <div class="chart">
+
+        <canvas id="myChart"></canvas>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= REMINDERS ================= -->
+
+<section id="reminders">
+
+    <h2>Today's Reminders</h2>
+
+    <div class="reminder-container">
+
+        <div class="reminder">
+
+            💧 Drink Water Every Hour
+
+        </div>
+
+        <div class="reminder">
+
+            🚶 Walk for 30 Minutes
+
+        </div>
+
+        <div class="reminder">
+
+            😴 Sleep Before 11 PM
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= WEEKLY REPORT ================= -->
+
+<section>
+
+    <h2>Weekly Report</h2>
+
+    <table>
+
+        <tr>
+
+            <th>Habit</th>
+
+            <th>Progress</th>
+
+        </tr>
+
+        <tr>
+
+            <td>Water Intake</td>
+
+            <td>90%</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Sleep</td>
+
+            <td>82%</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Exercise</td>
+
+            <td>88%</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Overall Health</td>
+
+            <td>87%</td>
+
+        </tr>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>HealthTrack</h3>
+
+    <p>
+        Stay Healthy • Stay Happy • Stay Active
+    </p>
+
+    <p>
+        © 2026 HealthTrack. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- Chart.js -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
